@@ -1027,7 +1027,7 @@ function simulateMultiplayerConnection() {
 }
 
 async function connectToSignalingServer() {
-    const signalingUrl = 'wss://udhws-2804-214-4010-1f52-f815-943d-2026-b5bd.a.free.pinggy.link/';
+    const signalingUrl = 'wss://arymello.github.io/ar-pongball/';
 
     return new Promise((resolve, reject) => {
         signalingSocket = new WebSocket(signalingUrl);
