@@ -1,0 +1,157 @@
+{
+  "name": "AR PongBall - Multiplayer",
+  "short_name": "AR PongBall",
+  "description": "Next-generation AR multiplayer Pong game with real-world room tracking",
+  "version": "1.0.0",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape-primary",
+  "theme_color": "#4ecdc4",
+  "background_color": "#000000",
+  "categories": ["games", "entertainment", "sports"],
+  "lang": "en-US",
+  
+  "icons": [
+    {
+      "src": "/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "AR PongBall gameplay on mobile"
+    },
+    {
+      "src": "/screenshot-tablet.png",
+      "sizes": "1024x768",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "AR PongBall multiplayer mode"
+    }
+  ],
+  
+  "related_applications": [],
+  "prefer_related_applications": false,
+  
+  "scope": "/",
+  "id": "ar-pongball-app",
+  
+  "shortcuts": [
+    {
+      "name": "Quick Solo Game",
+      "short_name": "Solo",
+      "description": "Start a quick solo practice game",
+      "url": "/?mode=solo",
+      "icons": [
+        {
+          "src": "/solo-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Create Multiplayer Room",
+      "short_name": "Create Room",
+      "description": "Create a new multiplayer room",
+      "url": "/?mode=create",
+      "icons": [
+        {
+          "src": "/multiplayer-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Room Calibration",
+      "short_name": "Calibrate",
+      "description": "Calibrate your room for optimal AR tracking",
+      "url": "/?mode=calibrate",
+      "icons": [
+        {
+          "src": "/calibrate-icon.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  
+  "permissions": [
+    "camera",
+    "microphone",
+    "device-info",
+    "wake-lock"
+  ],
+  
+  "protocol_handlers": [
+    {
+      "protocol": "web+arpongball",
+      "url": "/?room=%s"
+    }
+  ],
+  
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "navigate-new"]
+  },
+  
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "application/vnd.arpongball.room": [".room"]
+      }
+    }
+  ]
+}
